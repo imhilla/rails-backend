@@ -92,5 +92,3 @@ production:
   password: <%= ENV['HOSPITAL-BOOK-APPOINTMENT-APP_DATABASE_PASSWORD'] %>
 # psql -U postgres -c "CREATE ROLE Hillary LOGIN NOSUPERUSER INHERIT CREATEDB CREATEROLE;" postgres
 #  scram-sha-256
-
-git push heroku-dev test:master
