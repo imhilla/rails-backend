@@ -7,7 +7,14 @@ class AppointmentsController < ApplicationController
   end
 
   def create 
-    @appointment = Appointment.new(appointment_params)
-    @appointment.save
+    @appointment = Appointment.create!(
+      username: params['appointment']['username'],
+      model: params['appointment']['model'],
+      date: params['appointment']['date'],
+      city: params['appointment']['city'],
+      user_id: params['appointment']['userId']
+    )
+
   end
+  
 end
