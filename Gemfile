@@ -58,4 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'hirb', '~> 0.7.3'
+gem 'rack-cors'
 gem 'cloudinary'
