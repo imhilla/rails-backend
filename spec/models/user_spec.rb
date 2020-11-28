@@ -10,8 +10,4 @@ RSpec.describe User, type: :model do
   it "is valid with valid attributes" do
     expect(User.all.count).to be_eql 2
   end
-  it "is not valid without a secure password"
-  it "is not valid without email"
-  it "is not valid without username"
-  it "is not valid without unique email"
 end
