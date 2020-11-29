@@ -15,9 +15,9 @@ RSpec.describe SessionsController, type: :controller do
       expect(JSON.parse(response.body)['logged_in']).to eq(true)
     end
 
-    # it 'returns user' do
-    #   expect(JSON.parse(response.body)['user']['email']).to eq('hillary@gmail.com')
-    # end
+    it 'returns user' do
+      expect(JSON.parse(response.body)['user']['email']).to eq('hillary@gmail.com')
+    end
 
   end
 end
