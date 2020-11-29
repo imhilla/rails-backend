@@ -14,7 +14,8 @@ class AppointmentsController < ApplicationController
       city: params['appointment']['city'],
       user_id: params['appointment']['userId']
     )
-
+    render json: @appointment
+    
   end
   
 end
