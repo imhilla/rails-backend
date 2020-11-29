@@ -1,10 +1,9 @@
 require "rails_helper"
 
-RSpec.describe AppointmentsController, type: :controller do
+RSpec.describe RegistrationsController, type: :controller do
   describe "post a question route", :type => :request do
     before(:all) do
       User.destroy_all
-      # User.create(username: 'peter', email: 'peter@gmail.com', password: '$2a$12$bMGfKhJ8AE2M2', id: 1)  
     end
 
     before do
