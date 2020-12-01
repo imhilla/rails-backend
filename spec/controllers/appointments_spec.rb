@@ -8,7 +8,9 @@ RSpec.describe AppointmentsController, type: :controller do
     end
 
     before do
-      post '/appointments', params: { appointment: { username: 'imhilla', model: 'WHITE y', date: '12/23/2020', city: 'Kisumu', user_id: '1' } }
+      post '/appointments', params: {
+        appointment: { username: 'imhilla', model: 'WHITE y', date: '12/23/2020', city: 'Kisumu', user_id: '1' } 
+      }
     end
 
     it 'returns the username' do
