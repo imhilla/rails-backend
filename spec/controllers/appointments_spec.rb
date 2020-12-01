@@ -4,11 +4,11 @@ RSpec.describe AppointmentsController, type: :controller do
   describe "post a question route", :type => :request do
     before(:all) do
       User.destroy_all
-      User.create(username: 'peter', email: 'peter@gmail.com', password: '$2a$12$bMGfKhJ8AE2M2', id: 1)  
+      User.create(username: 'peter', email: 'peter@gmail.com', password: '$2a$12$bMGfKhJ8AE2M2', id: 1)
     end
 
     before do
-     post '/appointments', params: { appointment: {username: 'imhilla', model: 'WHITE y', date: '12/23/2020', city: 'Kisumu', user_id: '1'} }
+      post '/appointments', params: { appointment: { username: 'imhilla', model: 'WHITE y', date: '12/23/2020', city: 'Kisumu', user_id: '1' } }
     end
 
     it 'returns the username' do

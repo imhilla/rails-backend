@@ -6,7 +6,7 @@ class AppointmentsController < ApplicationController
     render json: @appointments
   end
 
-  def create 
+  def create
     @appointment = Appointment.create!(
       username: params['appointment']['username'],
       model: params['appointment']['model'],
@@ -15,7 +15,5 @@ class AppointmentsController < ApplicationController
       user_id: params['appointment']['userId']
     )
     render json: @appointment
-    
   end
-  
 end

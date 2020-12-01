@@ -7,7 +7,7 @@ RSpec.describe RegistrationsController, type: :controller do
     end
 
     before do
-     post '/registrations', params: { user: {username: 'imhilla', email: 'hillary@gmail.com', password: '123456', password_confirmation: '123456'} }
+      post '/registrations', params: { user: { username: 'imhilla', email: 'hillary@gmail.com', password: '123456', password_confirmation: '123456' } }
     end
 
     it 'returns the username' do
@@ -17,6 +17,5 @@ RSpec.describe RegistrationsController, type: :controller do
     it 'returns the email' do
       expect(JSON.parse(response.body)['user']['email']).to eq('hillary@gmail.com')
     end
-
   end
 end

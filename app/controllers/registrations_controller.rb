@@ -1,5 +1,5 @@
-class RegistrationsController < ApplicationController 
-   def create
+class RegistrationsController < ApplicationController
+  def create
     user = User.create!(
       email: params['user']['email'],
       password: params['user']['password'],
@@ -12,7 +12,7 @@ class RegistrationsController < ApplicationController
         status: :created,
         user: user,
       }
-    else 
+    else
       render json: { status: 500 }
     end
   end

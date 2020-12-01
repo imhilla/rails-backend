@@ -9,11 +9,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def new 
+  def new
     @item = Item.new
   end
 
-  def create 
+  def create
     @item = Item.new(item_params)
     @item.image.attach(params[:item][:image])
     @item.save
