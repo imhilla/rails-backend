@@ -1,7 +1,7 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe RegistrationsController, type: :controller do
-  describe "post a question route", :type => :request do
+  describe 'post a question route', type: :request do
     before(:all) do
       User.destroy_all
     end

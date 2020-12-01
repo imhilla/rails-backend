@@ -36,12 +36,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'shoulda-matchers', '~> 4.0'
-  gem 'rails-controller-testing'
-  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -59,8 +59,8 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
-gem 'rack-cors', :require => 'rack/cors'
-gem 'hirb', '~> 0.7.3'
 gem 'cloudinary'
+gem 'hirb', '~> 0.7.3'
+gem 'rack-cors', require: 'rack/cors'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

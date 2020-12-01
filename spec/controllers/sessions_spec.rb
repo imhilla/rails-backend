@@ -1,7 +1,7 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
-  describe "post a question route", :type => :request do
+  describe 'post a question route', type: :request do
     before(:all) do
       User.destroy_all
       User.create(username: 'imhilla', email: 'hillary@gmail.com', password: '123456')
