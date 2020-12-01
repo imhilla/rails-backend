@@ -64,3 +64,4 @@ gem 'cloudinary'
 gem 'hirb', '~> 0.7.3'
 gem 'rack-cors', require: 'rack/cors'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'rubocop', require: false
