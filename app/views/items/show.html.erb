@@ -2,6 +2,7 @@
 <p><%= @item.model %></p>
 <p><%= @item.reviews %></p>
 <p><%= @item.price %></p>
+<p><%= @item.description %></p>
 <% if @item.image.attached? %>
   <image src="<%=(url_for(@item.image)) %>", class= "style_image">
 <% end %>
