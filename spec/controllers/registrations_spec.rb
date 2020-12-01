@@ -8,7 +8,7 @@ RSpec.describe RegistrationsController, type: :controller do
 
     before do
       post '/registrations', params: {
-        user: { username: 'imhilla', email: 'hillary@gmail.com', password: '123456', password_confirmation: '123456' } 
+        user: { username: 'imhilla', email: 'hillary@gmail.com', password: '123456', password_confirmation: '123456' }
       }
     end
 
