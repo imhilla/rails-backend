@@ -11,9 +11,9 @@ class UsersController < ApplicationController
       password_confirmation: params['user']['password_confirmation'],
       username: params['user']['username']
       )
-    if @user.valid?
+    if @user
       token = encode_token({user_id: @user.id})
-      render json: {user: @user, token: token}
+      render json: {user: @user, token: token, status: :created }
     else
       render json: {error: "Invalid username or password"}
     end
