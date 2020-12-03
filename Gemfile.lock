@@ -92,6 +92,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    jwt (2.2.2)
     loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -262,6 +263,7 @@ DEPENDENCIES
   duktape
   hirb (~> 0.7.3)
   jbuilder (~> 2.5)
+  jwt
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rack-cors

@@ -1,17 +1,17 @@
 class ItemsController < ApplicationController
   include ItemsHelper
-  def index
-    @items = Item.all
-    render json: @items
-  end
+  # def index
+  #   @items = Item.all
+  #   render json: @items
+  # end
 
-  def show
-    @item = Item.find(params[:id])
-  end
+  # def show
+  #   @item = Item.find(params[:id])
+  # end
 
-  def new
-    @item = Item.new
-  end
+  # def new
+  #   @item = Item.new
+  # end
 
   def create
     @item = Item.new(item_params)

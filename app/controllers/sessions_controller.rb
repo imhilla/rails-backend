@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         user: user
       }
     else
-      render json: {status: "error", code: 3000, message: "Can't find purchases without start and end date"}, status: 400
+      render json: {status: "error", code: 3000, message: "Can't find user"}, status: 400
     end
   end
 
