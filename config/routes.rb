@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
   resources :items
   resources :appointments
+  post 'authenticate', to: 'authentication#authenticate'
   delete :logout, to: "sessions#logout"
   get :logged_in, to: "sessions#logged_in"
 end
