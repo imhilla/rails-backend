@@ -1,9 +1,16 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :authorized, only: [:auto_login]
 
   # REGISTER
   def create
-    @user = User.create(user_params)
+    @user = User.create(
+      # user_params
+      email: params['user']['email'],
+      password: params['user']['password'],
+      password_confirmation: params['user']['password_confirmation'],
+      username: params['user']['username']
+      )
     if @user.valid?
       token = encode_token({user_id: @user.id})
       render json: {user: @user, token: token}
