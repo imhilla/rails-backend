@@ -4,13 +4,7 @@ class UsersController < ApplicationController
 
   # REGISTER
   def create
-    @user = User.create(
-      # user_params
-      email: params['user']['email'],
-      password: params['user']['password'],
-      password_confirmation: params['user']['password_confirmation'],
-      username: params['user']['username']
-      )
+    @user = User.create(user_params)
     if @user
       token = encode_token({user_id: @user.id})
       render json: {user: @user, token: token, status: :created }
@@ -21,11 +15,11 @@ class UsersController < ApplicationController
 
   # LOGGING IN
   def login
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(email: params[:user][:email])
 
-    if @user && @user.authenticate(params[:password])
+    if @user && @user.authenticate(params[:user][:password])
       token = encode_token({user_id: @user.id})
-      render json: {user: @user, token: token}
+      render json: {user: @user, token: token, logged_in: true}
     else
       render json: {error: "Invalid username or password"}
     end
@@ -38,7 +32,7 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.permit(:username, :password, :age)
-  end
+  # def user_params
+  #   params.permit(:username, :password, :age)
+  # end
 end
