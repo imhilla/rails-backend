@@ -67,4 +67,3 @@ gem 'rubocop', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'jwt'
 gem 'simple_command'
-gem 'pry', '~> 0.13.1'

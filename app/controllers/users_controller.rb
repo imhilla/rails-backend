@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   include UsersHelper
+  skip_before_action :verify_authenticity_token
   before_action :authorized, only: [:auto_login]
 
-  # REGISTER
   def create
     @user = User.create(user_params)
     if @user
@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # LOGGING IN
   def login
     @user = User.find_by(email: params[:user][:email])
 
@@ -30,9 +29,4 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  private
-
-  # def user_params
-  #   params.permit(:username, :password, :age)
-  # end
 end
