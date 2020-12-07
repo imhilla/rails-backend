@@ -62,8 +62,8 @@ end
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'cloudinary'
 gem 'hirb', '~> 0.7.3'
+gem 'jwt'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rubocop', require: false
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'jwt'
 gem 'simple_command'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

@@ -14,7 +14,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     @appointment.save
-    
-    render json: {success: "An appointment was succesfully added!"}
+
+    render json: { success: 'An appointment was succesfully added!' }
   end
 end
