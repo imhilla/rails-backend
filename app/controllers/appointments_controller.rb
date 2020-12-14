@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   include AppointmentsHelper
 
   def index
@@ -6,16 +7,14 @@ class AppointmentsController < ApplicationController
     render json: @appointments
   end
 
-  def create 
-    @appointment = Appointment.create!(
-      username: params['appointment']['username'],
-      model: params['appointment']['model'],
-      date: params['appointment']['date'],
-      city: params['appointment']['city'],
-      user_id: params['appointment']['userId']
-    )
-    render json: @appointment
-    
+  def new
+    @ppointment = Appointment.new
   end
-  
+
+  def create
+    @appointment = Appointment.new(appointment_params)
+    @appointment.save
+
+    render json: { success: 'An appointment was succesfully added!' }
+  end
 end
